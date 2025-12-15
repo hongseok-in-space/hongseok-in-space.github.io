@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hongseok Lee | PhD Researcher</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-    }
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
-
 <body>
 
 <h1>Hongseok Lee</h1>
@@ -45,53 +13,102 @@ University of California, Los Angeles (UCLA)
 <a href="Hongseok_Lee_CV.pdf">CV</a>
 </p>
 
-<div class="section">
-<h2>About</h2>
-<p>
-I am a PhD candidate in Electrical and Computer Engineering at UCLA, advised by Prof. Dejan Marković.
-My research focuses on domain-specific hardware architectures, runtime reconfigurable arrays,
-and low-latency on-chip scheduling for ML and DSP workloads.
-</p>
+<style>
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  .tabs label {
+    padding: 10px 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-right: 5px;
+    background: #f5f5f5;
+  }
+  .tabs label:hover {
+    background: #eaeaea;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  .tab-content {
+    display: none;
+  }
+  input:checked + label {
+    background: white;
+    font-weight: bold;
+  }
+  #tab-about:checked ~ #content-about,
+  #tab-research:checked ~ #content-research,
+  #tab-pubs:checked ~ #content-pubs,
+  #tab-exp:checked ~ #content-exp,
+  #tab-contact:checked ~ #content-contact {
+    display: block;
+  }
+</style>
+
+<!-- Tabs -->
+<div class="tabs">
+  <input type="radio" id="tab-about" name="tab" checked>
+  <label for="tab-about">About</label>
+
+  <input type="radio" id="tab-research" name="tab">
+  <label for="tab-research">Research</label>
+
+  <input type="radio" id="tab-pubs" name="tab">
+  <label for="tab-pubs">Publications</label>
+
+  <input type="radio" id="tab-exp" name="tab">
+  <label for="tab-exp">Experience</label>
+
+  <input type="radio" id="tab-contact" name="tab">
+  <label for="tab-contact">Contact</label>
 </div>
 
-<div class="section">
-<h2>Research Interests</h2>
-<ul>
-  <li>Runtime Reconfigurable Architectures (CGRAs)</li>
-  <li>On-chip Scheduling and Resource Management</li>
-  <li>ML and DSP Accelerators</li>
-  <li>ASIC Design and VLSI Systems</li>
-  <li>Energy- and Area-Efficient Hardware</li>
-</ul>
+<!-- Content -->
+<div id="content-about" class="tab-content">
+  <p>
+  I am a PhD candidate in Electrical and Computer Engineering at UCLA,
+  advised by Prof. Dejan Marković. My research focuses on runtime
+  reconfigurable architectures and low-latency on-chip scheduling.
+  </p>
 </div>
 
-<div class="section">
-<h2>Publications</h2>
-<ul>
-  <li>
-    <b>H. Lee</b> et al.,
-    “A 16-nm Runtime Reconfigurable Array (RTRA) for Multi-Program ML and DSP Acceleration
-    With Multi-Level Hierarchical Partitioning and On-Chip Scheduling,”
-    <i>IEEE Journal of Solid-State Circuits (JSSC)</i>, Special Issue of ASSCC 2025, under review.
-  </li>
-</ul>
+<div id="content-research" class="tab-content">
+  <ul>
+    <li>Runtime Reconfigurable Arrays (RTRA)</li>
+    <li>Hierarchical On-Chip Scheduling</li>
+    <li>ML/DSP Accelerators</li>
+    <li>ASIC and VLSI Systems</li>
+  </ul>
 </div>
 
-<div class="section">
-<h2>Experience</h2>
-<ul>
-  <li>Hardware Engineering Intern, Apple</li>
-  <li>Research Intern, Intel</li>
-</ul>
+<div id="content-pubs" class="tab-content">
+  <ul>
+    <li>
+      <b>H. Lee</b> et al.,
+      “A 16-nm Runtime Reconfigurable Array (RTRA) for Multi-Program ML and DSP Acceleration
+      With Multi-Level Hierarchical Partitioning and On-Chip Scheduling,”
+      <i>IEEE Journal of Solid-State Circuits (JSSC)</i>, Special Issue of ASSCC 2025, under review.
+    </li>
+  </ul>
 </div>
 
-<div class="section">
-<h2>Contact</h2>
-<p>
-Email: hongseok@ucla.edu<br>
-Los Angeles, CA
-</p>
+<div id="content-exp" class="tab-content">
+  <ul>
+    <li>Hardware Engineering Intern, Apple</li>
+    <li>Research Intern, Intel</li>
+  </ul>
+</div>
+
+<div id="content-contact" class="tab-content">
+  <p>
+    Email: hongseok@ucla.edu<br>
+    Los Angeles, CA
+  </p>
 </div>
 
 </body>
-</html>
+
