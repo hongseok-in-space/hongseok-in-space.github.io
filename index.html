@@ -1,114 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hongseok Lee | PhD Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+      line-height: 1.65;
+      color: #222;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 30px;
+    }
+
+    .header p {
+      margin: 4px 0;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .tabs label {
+      padding: 10px 16px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      margin-right: 6px;
+      background-color: #f5f5f5;
+      font-size: 15px;
+    }
+
+    .tabs label:hover {
+      background-color: #eaeaea;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input:checked + label {
+      background-color: #ffffff;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      padding-top: 10px;
+    }
+
+    #tab-about:checked ~ #content-about,
+    #tab-research:checked ~ #content-research,
+    #tab-publications:checked ~ #content-publications,
+    #tab-experience:checked ~ #content-experience,
+    #tab-contact:checked ~ #content-contact {
+      display: block;
+    }
+
+    /* Lists */
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .tabs label {
+        margin-bottom: 6px;
+      }
+    }
+  </style>
+</head>
+
 <body>
 
-<h1>Hongseok Lee</h1>
-<p>
-PhD Candidate, Electrical and Computer Engineering<br>
-University of California, Los Angeles (UCLA)
-</p>
+  <!-- Header -->
+  <div class="header">
+    <h1>Hongseok Lee</h1>
+    <p>
+      PhD Candidate, Electrical and Computer Engineering<br>
+      University of California, Los Angeles (UCLA)
+    </p>
+    <p>
+      <a href="mailto:hongseok@ucla.edu">Email</a> |
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a> |
+      <a href="https://github.com/hongseoklee" target="_blank">GitHub</a> |
+      <a href="Hongseok_Lee_CV.pdf">CV</a>
+    </p>
+  </div>
 
-<p>
-<a href="mailto:hongseok@ucla.edu">Email</a> |
-<a href="https://scholar.google.com">Google Scholar</a> |
-<a href="https://github.com/hongseoklee">GitHub</a> |
-<a href="Hongseok_Lee_CV.pdf">CV</a>
-</p>
+  <!-- Tabs -->
+  <div class="tabs">
+    <input type="radio" id="tab-about" name="tab" checked>
+    <label for="tab-about">About</label>
 
-<style>
-  .tabs {
-    display: flex;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
-  }
-  .tabs label {
-    padding: 10px 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    margin-right: 5px;
-    background: #f5f5f5;
-  }
-  .tabs label:hover {
-    background: #eaeaea;
-  }
-  input[type="radio"] {
-    display: none;
-  }
-  .tab-content {
-    display: none;
-  }
-  input:checked + label {
-    background: white;
-    font-weight: bold;
-  }
-  #tab-about:checked ~ #content-about,
-  #tab-research:checked ~ #content-research,
-  #tab-pubs:checked ~ #content-pubs,
-  #tab-exp:checked ~ #content-exp,
-  #tab-contact:checked ~ #content-contact {
-    display: block;
-  }
-</style>
+    <input type="radio" id="tab-research" name="tab">
+    <label for="tab-research">Research</label>
 
-<!-- Tabs -->
-<div class="tabs">
-  <input type="radio" id="tab-about" name="tab" checked>
-  <label for="tab-about">About</label>
+    <input type="radio" id="tab-publications" name="tab">
+    <label for="tab-publications">Publications</label>
 
-  <input type="radio" id="tab-research" name="tab">
-  <label for="tab-research">Research</label>
+    <input type="radio" id="tab-experience" name="tab">
+    <label for="tab-experience">Experience</label>
 
-  <input type="radio" id="tab-pubs" name="tab">
-  <label for="tab-pubs">Publications</label>
+    <input type="radio" id="tab-contact" name="tab">
+    <label for="tab-contact">Contact</label>
+  </div>
 
-  <input type="radio" id="tab-exp" name="tab">
-  <label for="tab-exp">Experience</label>
+  <!-- About -->
+  <div id="content-about" class="tab-content">
+    <p>
+      I am a PhD candidate in Electrical and Computer Engineering at UCLA,
+      advised by Prof. Dejan Marković. My research focuses on runtime
+      reconfigurable hardware architectures with multi-level on-chip
+      scheduling to enable low-latency, energy-efficient execution of
+      dynamic ML and DSP workloads.
+    </p>
+  </div>
 
-  <input type="radio" id="tab-contact" name="tab">
-  <label for="tab-contact">Contact</label>
-</div>
+  <!-- Research -->
+  <div id="content-research" class="tab-content">
+    <ul>
+      <li>Runtime Reconfigurable Arrays (CGRAs)</li>
+      <li>Hierarchical On-Chip Scheduling and Resource Management</li>
+      <li>ML and DSP Accelerators</li>
+      <li>ASIC Design and VLSI Systems</li>
+      <li>Energy- and Area-Efficient Architectures</li>
+    </ul>
+  </div>
 
-<!-- Content -->
-<div id="content-about" class="tab-content">
-  <p>
-  I am a PhD candidate in Electrical and Computer Engineering at UCLA,
-  advised by Prof. Dejan Marković. My research focuses on runtime
-  reconfigurable architectures and low-latency on-chip scheduling.
-  </p>
-</div>
+  <!-- Publications -->
+  <div id="content-publications" class="tab-content">
+    <ul>
+      <li>
+        <b>H. Lee</b> et al.,<br>
+        “A 16-nm Runtime Reconfigurable Array (RTRA) for Multi-Program ML and
+        DSP Acceleration With Multi-Level Hierarchical Partitioning and
+        On-Chip Scheduling,”<br>
+        <i>IEEE Journal of Solid-State Circuits (JSSC)</i>,
+        Special Issue of ASSCC 2025, under review.
+      </li>
+    </ul>
+  </div>
 
-<div id="content-research" class="tab-content">
-  <ul>
-    <li>Runtime Reconfigurable Arrays (RTRA)</li>
-    <li>Hierarchical On-Chip Scheduling</li>
-    <li>ML/DSP Accelerators</li>
-    <li>ASIC and VLSI Systems</li>
-  </ul>
-</div>
+  <!-- Experience -->
+  <div id="content-experience" class="tab-content">
+    <ul>
+      <li>Hardware Engineering Intern, Apple</li>
+      <li>Research Intern, Intel</li>
+    </ul>
+  </div>
 
-<div id="content-pubs" class="tab-content">
-  <ul>
-    <li>
-      <b>H. Lee</b> et al.,
-      “A 16-nm Runtime Reconfigurable Array (RTRA) for Multi-Program ML and DSP Acceleration
-      With Multi-Level Hierarchical Partitioning and On-Chip Scheduling,”
-      <i>IEEE Journal of Solid-State Circuits (JSSC)</i>, Special Issue of ASSCC 2025, under review.
-    </li>
-  </ul>
-</div>
+  <!-- Contact -->
+  <div id="content-contact" class="tab-content">
+    <p>
+      Email: hongseok@ucla.edu<br>
+      Location: Los Angeles, CA
+    </p>
+  </div>
 
-<div id="content-exp" class="tab-content">
-  <ul>
-    <li>Hardware Engineering Intern, Apple</li>
-    <li>Research Intern, Intel</li>
-  </ul>
-</div>
-
-<div id="content-contact" class="tab-content">
-  <p>
-    Email: hongseok@ucla.edu<br>
-    Los Angeles, CA
-  </p>
-</div>
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 Hongseok Lee
+  </div>
 
 </body>
-
+</html>
