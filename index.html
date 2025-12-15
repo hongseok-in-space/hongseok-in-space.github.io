@@ -80,4 +80,85 @@ a:hover {
 
 <h1>Hongseok Lee</h1>
 <p>
-PhD Candidate, Electrical and
+PhD Candidate, Electrical and Computer Engineering<br>
+University of California, Los Angeles (UCLA)
+</p>
+
+<p>
+<a href="mailto:hongseok@ucla.edu">Email</a> |
+<a href="https://scholar.google.com" target="_blank">Google Scholar</a> |
+<a href="https://github.com/hongseoklee" target="_blank">GitHub</a> |
+<a href="Hongseok_Lee_CV.pdf">CV</a>
+</p>
+
+<!-- Navigation Buttons -->
+<div class="nav">
+  <button class="active" onclick="showSection('about', this)">About</button>
+  <button onclick="showSection('research', this)">Research Interests</button>
+  <button onclick="showSection('publications', this)">Publications</button>
+  <button onclick="showSection('experience', this)">Experience</button>
+  <button onclick="showSection('contact', this)">Contact</button>
+</div>
+
+<!-- Sections -->
+<div id="about" class="section active">
+  <p>
+    I am a PhD candidate in Electrical and Computer Engineering at UCLA,
+    advised by Prof. Dejan Marković. My research focuses on runtime
+    reconfigurable architectures with multi-level on-chip scheduling
+    for low-latency, energy-efficient ML and DSP workloads.
+  </p>
+</div>
+
+<div id="research" class="section">
+  <ul>
+    <li>Runtime Reconfigurable Arrays (CGRAs)</li>
+    <li>Hierarchical On-Chip Scheduling</li>
+    <li>ML and DSP Accelerators</li>
+    <li>ASIC Design and VLSI Systems</li>
+    <li>Energy- and Area-Efficient Hardware</li>
+  </ul>
+</div>
+
+<div id="publications" class="section">
+  <ul>
+    <li>
+      <b>H. Lee</b> et al.,<br>
+      “A 16-nm Runtime Reconfigurable Array (RTRA) for Multi-Program ML and DSP
+      Acceleration With Multi-Level Hierarchical Partitioning and On-Chip Scheduling,”<br>
+      <i>IEEE Journal of Solid-State Circuits (JSSC)</i>,
+      Special Issue of ASSCC 2025, under review.
+    </li>
+  </ul>
+</div>
+
+<div id="experience" class="section">
+  <ul>
+    <li>Hardware Engineering Intern, Apple</li>
+    <li>Research Intern, Intel</li>
+  </ul>
+</div>
+
+<div id="contact" class="section">
+  <p>
+    Email: hongseok@ucla.edu<br>
+    Location: Los Angeles, CA
+  </p>
+</div>
+
+<div class="footer">
+  © 2025 Hongseok Lee
+</div>
+
+<script>
+function showSection(sectionId, button) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+
+  document.getElementById(sectionId).classList.add('active');
+  button.classList.add('active');
+}
+</script>
+
+</body>
+</html>
